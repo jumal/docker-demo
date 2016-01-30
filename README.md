@@ -1,4 +1,4 @@
-# Docker Demo
+# Docker Demo [![Build Status](https://travis-ci.org/jumal/docker-demo.svg?branch=master)](https://travis-ci.org/jumal/docker-demo)
 
 Docker demo using 3 containers types:
  - **web** hosting a REST API
