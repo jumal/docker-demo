@@ -9,10 +9,12 @@ RUN echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" | te
     apt-get clean && \
     rm -rf /var/cache/oracle-jdk8-installer && \
     rm -rf /var/lib/apt/lists/*
+
 RUN groupadd -r docker && useradd -rmg docker docker
 
 VOLUME /tmp
-ADD target/*.jar /home/docker/app.jar
-RUN bash -c 'touch /home/docker/app.jar'
+WORKDIR /home/docker
+ADD target/*.jar app.jar
+RUN bash -c 'touch app.jar'
 USER docker
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/home/docker/app.jar"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","app.jar"]
