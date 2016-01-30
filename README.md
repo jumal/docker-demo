@@ -1,9 +1,9 @@
 # Docker Demo [![Build Status](https://travis-ci.org/jumal/docker-demo.svg?branch=master)](https://travis-ci.org/jumal/docker-demo)
 
 Docker demo using 3 containers types:
- - **web** hosting a REST API
- - **mongodb** hosting a MongoDB server with data persistence
- - **ha_web** hosting a load balancer for the web containers
+ - **web** running a REST API
+ - **mongodb** running a MongoDB server with data persistence
+ - **ha_web** running a load balancer for the web containers
 
 ## Installing Docker
 Follow the instructions for your OS on [this page](https://docs.docker.com/engine/installation).
