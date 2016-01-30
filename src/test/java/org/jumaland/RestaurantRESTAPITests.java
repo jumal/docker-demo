@@ -48,7 +48,7 @@ public class RestaurantRESTAPITests {
     private static final CollectionResponseType COLLECTION_TYPE = new CollectionResponseType();
 
     @Rule
-    public MongoDbRule rule = newMongoDbRule().defaultSpringMongoDb("test");
+    public MongoDbRule rule = newMongoDbRule().defaultSpringMongoDb("docker-demo");
 
     @Autowired
     private ApplicationContext applicationContext;
