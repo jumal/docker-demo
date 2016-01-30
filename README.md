@@ -1,6 +1,6 @@
 # Docker Demo
 
-Docker demo using 3 containers
+Docker demo using 3 containers types:
  - **web** hosting a REST API
  - **mongodb** hosting a MongoDB server with data persistence
  - **ha_web** hosting a load balancer for the web containers
@@ -14,16 +14,16 @@ Follow the instructions for your OS on [this page](https://docs.docker.com/engin
 ## Starting the Containers
 `docker-compose up -d`
 
-List the running containers by typing
+List the running containers
 
 `docker-compose ps`
 
 ## Scaling
-Create 3 instances of the web container by typing
+Create 3 instances of the web container
 
 `docker-compose scale web=3`
 
-List the running containers by typing
+List the running containers
 
 `docker-compose ps`
 
@@ -43,5 +43,5 @@ Point your broweser to http://127.0.0.1
 #### Stopping and Removing the Containers
 `docker-compose stop && docker-compose rm -f`
 
-#### Rebuilding the Web Image
+#### Updating a Container Image
 `docker-compose build`
