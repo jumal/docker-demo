@@ -1,40 +1,47 @@
 # Docker Demo
 
 Docker demo using 3 containers
- - *web* hosting a REST API
- - *mongodb* hosting a MongoDB server with data persistence
- - *ha_web* hosting a load balancer for the web containers
+ - **web** hosting a REST API
+ - **mongodb** hosting a MongoDB server with data persistence
+ - **ha_web** hosting a load balancer for the web containers
 
 ## Installing Docker
-
-First, you need to [install Docker](https://docs.docker.com/engine/installation).
+Follow the instructions for your OS on [this page](https://docs.docker.com/engine/installation).
 
 ## Building the REST API
 `mvn clean package`
 
-## Starting the containers
+## Starting the Containers
 `docker-compose up -d`
 
 List the running containers by typing
+
 `docker-compose ps`
 
 ## Scaling
 Create 3 instances of the web container by typing
+
 `docker-compose scale web=3`
 
 List the running containers by typing
+
 `docker-compose ps`
+
+## Accessing the REST API
+Point your broweser to http://127.0.0.1
+
+*Note:* if using boot2docker, use the IP contained in the DOCKER_HOST environment variable. 
 
 ## Miscellaneous
 
-#### Connecting to a container
+#### Connecting to a Container
 `docker exec -it dockerdemo_web_1 bash`
 
-#### Viewing a container logs
+#### Viewing a Container's logs
 `docker logs dockerdemo_web_1`
 
-#### Stopping and removing the containers
+#### Stopping and Removing the Containers
 `docker-compose stop && docker-compose rm -f`
 
-#### Rebuilding the web image
+#### Rebuilding the Web Image
 `docker-compose build`
