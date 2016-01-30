@@ -60,7 +60,7 @@
             <artifactId>json-path</artifactId>
             <scope>test</scope>
         </dependency>
-        <!-- Allow PATCH requests when using RestTemplate -->
+        <!-- To allow PATCH requests when using RestTemplate -->
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
