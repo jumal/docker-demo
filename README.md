@@ -11,25 +11,26 @@ Docker demo using 5 containers:
 Follow the instructions for your OS on [this page](https://docs.docker.com/engine/installation).
 
 ### Build the REST API
-`mvn clean package`
-
+```
+mvn clean package
+```
 ### Set the Number of Containers
-`docker-compose scale web=3`
-
+```
+docker-compose scale web=3
+```
 ### Start the Containers
-`docker-compose up -d`
-
+```
+docker-compose up -d
+```
 List the running containers
-
-`docker-compose ps`
-
+```
+docker-compose ps
+```
 ### Access the REST API
 Point your browser to http://127.0.0.1.
 
 *Note:* if using boot2docker, use the IP contained in the DOCKER_HOST environment variable. 
-
 ## Configuration
-
 ### Docker
 ```
 FROM debian
@@ -70,23 +71,28 @@ mongodb:
   image: mongo
 ```
 ## Guide
-
 ### Connect to a Container
-`docker exec -it dockerdemo_web_1 bash`
-
+```
+docker exec -it dockerdemo_web_1 bash
+```
 ### View a Container's logs
-`docker logs dockerdemo_web_1`
-
+```
+docker logs dockerdemo_web_1
+```
 ### Add more Containers
 Create 2 more instances of the web container
-
-`docker-compose scale web=5 && docker-compose up --force-recreate -d`
-
+```
+docker-compose scale web=5 && docker-compose up --force-recreate -d
+```
 ### Stop the Containers
-`docker-compose stop`
-
+```
+docker-compose stop
+```
 ### Update a Container Image
-`docker-compose build`
-
+```
+docker-compose build
+```
 ### Remove the Containers
-`docker-compose rm -f`
+```
+docker-compose rm -f
+```
