@@ -32,7 +32,7 @@ Point your browser to http://127.0.0.1.
 *Note:* if using boot2docker, use the IP contained in the DOCKER_HOST environment variable. 
 ## Configuration
 ### Docker
-File: *Dockerfile*
+*Dockerfile*
 ```
 FROM debian
 
@@ -55,7 +55,7 @@ USER docker
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","app.jar"]
 ```
 ### Docker Compose
-File: *docker-compose.yml*
+*docker-compose.yml*
 ```
 load_balancer:
  image: tutum/haproxy
