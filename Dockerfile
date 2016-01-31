@@ -11,7 +11,6 @@ RUN echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" | te
     rm -rf /var/lib/apt/lists/*
 
 RUN groupadd -r docker && useradd -rmg docker docker
-
 VOLUME /tmp
 WORKDIR /home/docker
 ADD target/*.jar app.jar
