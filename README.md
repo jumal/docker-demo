@@ -5,45 +5,45 @@ Docker demo using 5 containers:
  - 1 **mongodb** server with data persistence
  - 1 **load_balancer** for the web containers
 
-### Installing Docker
+### Install Docker
 Follow the instructions for your OS on [this page](https://docs.docker.com/engine/installation).
 
-### Building the REST API
+### Build the REST API
 `mvn clean package`
 
-### Setting the Containers Number
+### Set the Containers Number
 `docker-compose scale web=3`
 
-### Starting the Containers
+### Start the Containers
 `docker-compose up -d`
 
 List the running containers
 
 `docker-compose ps`
 
-### Accessing the REST API
+### Access the REST API
 Point your browser to http://127.0.0.1.
 
 *Note:* if using boot2docker, use the IP contained in the DOCKER_HOST environment variable. 
 
 ### Miscellaneous
 
-##### Connecting to a Container
+##### Connect to a Container
 `docker exec -it dockerdemo_web_1 bash`
 
-##### Viewing a Container's logs
+##### View a Container's logs
 `docker logs dockerdemo_web_1`
 
-##### Adding more Containers
+##### Add more Containers
 Create 2 more instances of the web container
 
 `docker-compose scale web=5 && docker-compose up --force-recreate -d`
 
-##### Stopping the Containers
+##### Stop the Containers
 `docker-compose stop`
 
-##### Updating a Container Image
+##### Update a Container Image
 `docker-compose build`
 
-##### Removing the Containers
+##### Remove the Containers
 `docker-compose rm -f`
