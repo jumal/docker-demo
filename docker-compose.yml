@@ -1,4 +1,4 @@
-ha_web:
+load_balancer:
  image: tutum/haproxy
  links:
    - web

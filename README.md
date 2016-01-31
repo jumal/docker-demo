@@ -3,7 +3,7 @@
 Docker demo using 3 containers types:
  - **web** running a REST API
  - **mongodb** running a MongoDB server with data persistence
- - **ha_web** running a load balancer for the web containers
+ - **load_balancer** running a load balancer for the web containers
 
 ## Installing Docker
 Follow the instructions for your OS on [this page](https://docs.docker.com/engine/installation).
@@ -21,14 +21,14 @@ List the running containers
 ## Scaling
 Create 3 instances of the web container
 
-`docker-compose scale web=3`
+`docker-compose scale web=3 && docker-compose up --force-recreate -d`
 
 List the running containers
 
 `docker-compose ps`
 
 ## Accessing the REST API
-Point your broweser to http://127.0.0.1
+Point your browser to http://127.0.0.1.
 
 *Note:* if using boot2docker, use the IP contained in the DOCKER_HOST environment variable. 
 
@@ -40,8 +40,11 @@ Point your broweser to http://127.0.0.1
 #### Viewing a Container's logs
 `docker logs dockerdemo_web_1`
 
-#### Stopping and Removing the Containers
-`docker-compose stop && docker-compose rm -f`
+#### Stopping the Containers
+`docker-compose stop`
 
 #### Updating a Container Image
 `docker-compose build`
+
+#### Removing the Containers
+`docker-compose rm -f`
