@@ -72,7 +72,7 @@ web:
 mongodb:
   image: mongo
 ```
-## Guide
+## HOWTOs
 ### Connect to a Container
 ```
 docker exec -it dockerdemo_web_1 bash
