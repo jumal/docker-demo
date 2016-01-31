@@ -13,7 +13,7 @@ Follow the instructions for your OS on [this page](https://docs.docker.com/engin
 ### Build the REST API
 `mvn clean package`
 
-### Set the Containers Number
+### Set the Number of Containers
 `docker-compose scale web=3`
 
 ### Start the Containers
