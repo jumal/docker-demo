@@ -1,4 +1,5 @@
-# Docker Demo [![Build Status](https://travis-ci.org/jumal/docker-demo.svg?branch=master)](https://travis-ci.org/jumal/docker-demo)
+# Docker Demo
+[![Build Status](https://travis-ci.org/jumal/docker-demo.svg?branch=master)](https://travis-ci.org/jumal/docker-demo)
 
 Docker demo using 5 containers:
  - 3 **web** containers running a REST API
