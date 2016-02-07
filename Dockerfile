@@ -13,7 +13,7 @@ RUN echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" | te
 RUN groupadd -r docker && useradd -rmg docker docker
 VOLUME /tmp
 WORKDIR /home/docker
-ADD target/*.jar app.jar
-RUN touch app.jar
+ADD target/*.jar application.jar
+RUN touch application.jar
 USER docker
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","app.jar"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","application.jar"]
