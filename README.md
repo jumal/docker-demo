@@ -1,5 +1,6 @@
 # Docker Demo
 [![Build Status](https://travis-ci.org/jumal/docker-demo.svg?branch=master)](https://travis-ci.org/jumal/docker-demo)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
 Docker demo using 5 containers:
  - 3 **web** containers running a REST API
